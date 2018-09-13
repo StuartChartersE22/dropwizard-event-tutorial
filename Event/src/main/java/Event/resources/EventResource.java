@@ -29,4 +29,9 @@ public class EventResource {
         return repository.findById(id.get())
                 .orElseThrow(() -> new WebApplicationException("Event not found", 404));
     }
+
+    @POST
+    public Event create(Event event) {
+        return repository.save(event);
+    }
 }
