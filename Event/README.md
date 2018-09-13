@@ -1,5 +1,9 @@
 # Event DropWizard Tutorial
 
+Tutorial used:
+. https://www.sitepoint.com/tutorial-getting-started-dropwizard/
+. https://www.sitepoint.com/tutorial-getting-started-dropwizard-crud/
+
 How to start the name application
 ---
 
