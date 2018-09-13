@@ -26,6 +26,6 @@ Run ```mvn archetype:generate \
 
 Structure
 ---
-api: Houses models
-core: db access classes
+api: Houses models <br/>
+core: db access classes <br/>
 resource: defining routes
