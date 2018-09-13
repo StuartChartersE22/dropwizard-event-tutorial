@@ -2,10 +2,9 @@ package Event.resources;
 
 import Event.api.Event;
 import Event.core.EventRepository;
+import io.dropwizard.jersey.params.LongParam;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -22,5 +21,12 @@ public class EventResource {
     @GET
     public List<Event> allEvents() {
         return repository.findAll();
+    }
+
+    @GET
+    @Path("{id}")
+    public Event getEvent(@PathParam("id") LongParam id) {
+        return repository.findById(id.get())
+                .orElseThrow(() -> new WebApplicationException("Event not found", 404));
     }
 }
