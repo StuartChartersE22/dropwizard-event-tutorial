@@ -23,3 +23,9 @@ Run ```mvn archetype:generate \
                -DarchetypeArtifactId=java-simple \
                -DarchetypeVersion=1.3.5```
 1.3.5 is the latest version as of writing this.
+
+Structure
+---
+api: Houses models
+core: db access classes
+resource: defining routes
