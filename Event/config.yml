@@ -5,4 +5,4 @@ logging:
 
 server:
   rootPath: /api/*
-dateFormat: yyyy-MM-dd'T'HH:mmZ
+dateFormat: dd-MM-yyyy
