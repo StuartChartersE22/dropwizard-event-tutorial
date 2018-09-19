@@ -2,6 +2,7 @@ package Event;
 
 import Event.core.DummyEventRepository;
 import Event.core.EventRepository;
+import Event.health.ResourceHealthCheck;
 import Event.resources.EventResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -25,6 +26,10 @@ public class EventApplication extends Application<EventConfiguration> {
         EventRepository repository = new DummyEventRepository();
         EventResource eventResource = new EventResource(repository);
         environment.jersey().register(eventResource);
+
+        final ResourceHealthCheck resourceHealthCheck = new ResourceHealthCheck(eventResource);
+
+        environment.healthChecks().register("ResourceHealthCheck", resourceHealthCheck);
     }
 
     @Override
