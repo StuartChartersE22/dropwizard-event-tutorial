@@ -7,7 +7,7 @@ Tutorial used:
 How to start the name application
 ---
 
-1. Run `mvn clean install` to build your application
+1. Run `mvn clean install` or `mvn package` on the top level to build your application
 1. Start application with `java -jar target/Event-0.0.1.jar server config.yml`
 1. To check that your application is running enter url `http://localhost:8080`
 
